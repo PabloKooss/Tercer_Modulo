@@ -1,7 +1,7 @@
 
-CREATE DATABASE Inventario;
+CREATE DATABASE Provedores;
 
-USE Inventario;
+USE Provedores;
 
 CREATE TABLE Proveedor (
     Cod_Proveedor INT PRIMARY KEY,
