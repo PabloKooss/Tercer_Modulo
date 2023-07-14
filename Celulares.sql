@@ -43,24 +43,3 @@ INSERT INTO producto (codigo_producto, nombre, precio, codigo_fabricante) VALUES
 SELECT * FROM fabricante;
 
 SELECT * FROM producto;
-
--- Calcula el número total de productos que hay en la tabla productos. 
-SELECT COUNT(*) AS total_productos FROM producto;
-
--- Numero total de productos de cada fabricante incluidos los que tienen 0
-SELECT F.nombre AS fabricante, COUNT(P.codigo_producto) AS total_productos FROM fabricante F LEFT JOIN producto P ON F.codigo_fabricante = P.codigo_fabricante GROUP BY F.nombre ORDER BY total_productos DESC;
-
--- Muestra el precio máximo, precio mínimo y precio medio de los productos
-SELECT MAX(precio) AS precio_maximo, nombre FROM producto;
-
-SELECT MIN(precio) AS precio_minimo, nombre FROM producto;
-
-SELECT AVG(precio) AS precio_medio, nombre FROM producto;
-
-
--- Muestra el precio máximo, precio mínimo y precio medio de los productos
-SELECT MAX(precio) AS precio_maximo, nombre FROM producto;
-
-SELECT MIN(precio) AS precio_minimo, nombre FROM producto;
-
-SELECT AVG(precio) AS precio_medio, nombre FROM producto;
